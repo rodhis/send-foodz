@@ -2,7 +2,6 @@ import { createContext, useReducer } from "react";
 
 const CartContext = createContext({
     items: [],
-
     addItem: (item) => {},
     removeItem: (id) => {}
 })
@@ -21,7 +20,7 @@ function cartReducer(state, action) {
                 ...existingItem,
                 quantity: existingItem.quantity + 1
             }
-            updatedItem[existingCartItemIndex] = updatedItem
+            updatedItems[existingCartItemIndex] = updatedItem
         } else {
             updatedItems.push({...action.item, quantity: 1})
         }
@@ -52,6 +51,7 @@ function cartReducer(state, action) {
 
     return state
 }
+
 
 export function CartContextProvider({children}) {
 
