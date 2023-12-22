@@ -12,7 +12,7 @@ import Error from "./Error.jsx"
 const requestConfig = {
     method: 'POST',
     headers: {
-        'Content-Type': 'applications/json'
+        'Content-Type': 'application/json'
     },
 }
 
